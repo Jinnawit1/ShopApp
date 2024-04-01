@@ -89,16 +89,11 @@ console.log(listpro)
         :key="item.id"
         class="grid grid-cols-2 p-4 bg-base-200"
       >
-        <img
-          class="w-full p-10"
-          src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-        />
+        <figure style="height: 300px; overflow: hidden">
+          <img :src="item.img" style="width: 100%; height: 100%; object-fit: cover" />
+        </figure>
 
         <div>
-          <div class="grid justify-items-end">
-            <button class="btn btn-error w-10 h-10">x</button>
-          </div>
-
           <div class="grid grid-cols-2">
             <div>
               <div>productname</div>

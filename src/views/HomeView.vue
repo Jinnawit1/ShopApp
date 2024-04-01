@@ -5,42 +5,42 @@ import { list } from 'postcss'
 const product = reactive([
   {
     name: 'T-shirt',
-    img: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg',
+    img: 'https://img.freepik.com/free-psd/simple-black-men-s-tee-mockup_53876-57893.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1711843200&semt=ais',
     price: 350,
     initialPrice: 350,
     amount: 1
   },
   {
     name: 'Hat',
-    img: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg',
+    img: 'https://img.freepik.com/free-psd/cap-mockup_1310-495.jpg',
     price: 250,
     initialPrice: 250,
     amount: 1
   },
   {
     name: 'Hoodie',
-    img: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg',
+    img: 'https://unblast.com/wp-content/uploads/2021/10/Simple-Hoodie-Mockup-2.jpg',
     price: 700,
     initialPrice: 700,
     amount: 1
   },
   {
     name: 'Watch',
-    img: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg',
+    img: 'https://img.freepik.com/free-photo/closeup-shot-golden-watch-isolated_181624-28492.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1711843200&semt=ais',
     price: 850,
     initialPrice: 850,
     amount: 1
   },
   {
     name: 'Bag',
-    img: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg',
+    img: 'https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?cs=srgb&dl=pexels-ge-yonk-1152077.jpg&fm=jpg',
     price: 640,
     initialPrice: 640,
     amount: 1
   },
   {
     name: 'Belt:',
-    img: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg',
+    img: 'https://img.freepik.com/free-photo/leather-belt_74190-2615.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1711843200&semt=ais',
     price: 230,
     initialPrice: 230,
     amount: 1
@@ -65,24 +65,12 @@ const addtocart = (product) => {
 </script>
 
 <template>
-  <layout
-    ><div class="hero h-screen bg-base-200">
-      <div class="hero-content text-center">
-        <div class="max-w-md">
-          <h1 class="text-5xl font-bold">Hello there</h1>
-          <p class="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
-            exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
-          </p>
-          <button class="btn btn-primary">Get Started</button>
-        </div>
-      </div>
-    </div>
+  <layout>
     <!-- ------------------- -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       <div v-for="item in product" :key="item.id" class="card w-full bg-base-100 shadow-xl">
-        <figure>
-          <img :src="item.img" />
+        <figure style="height: 300px; overflow: hidden">
+          <img :src="item.img" style="width: 100%; height: 100%; object-fit: cover" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">{{ item.name }}</h2>
